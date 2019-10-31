@@ -1,11 +1,12 @@
 # TO DO
 
-* Sukurti web aplikaciją:
-- Galima įkelti nuotrauką
-- Galima įrašyti žodį
-(Basic)
-- Nuotraukoje esantį tekstą parašo tekstu
-- Tekste pažymi rastą žodį
-(Advanced)
-- Nuotraukoje pažymi rastą žodį
-*
+1. Sukurti web aplikaciją:
+* Galima įkelti nuotrauką
+* Galima įrašyti žodį
+* (Basic)
+* Nuotraukoje esantį išveda į ekraną
+* Tekste pažymi rastą žodį
+* (Advanced)
+* Nuotraukoje pažymi rastą žodį
+2. Iš nuotraukos išgauti tekstą (su tesseract)
+3. Sukurti algoritmą, kuris rastų žodį tekste
