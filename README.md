@@ -4,7 +4,7 @@
 * Galima įkelti nuotrauką
 * Galima įrašyti žodį
 * (Basic)
-* Nuotraukoje esantį išveda į ekraną
+* Nuotraukoje esantį tekstą išveda į ekraną
 * Tekste pažymi rastą žodį
 * (Advanced)
 * Nuotraukoje pažymi rastą žodį
