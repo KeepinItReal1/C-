@@ -1,5 +1,11 @@
-# C-
-C#
-daune normalesne pavadinima reik
+# TO DO
 
-mldc 
+* Sukurti web aplikaciją:
+- Galima įkelti nuotrauką
+- Galima įrašyti žodį
+(Basic)
+- Nuotraukoje esantį tekstą parašo tekstu
+- Tekste pažymi rastą žodį
+(Advanced)
+- Nuotraukoje pažymi rastą žodį
+*
