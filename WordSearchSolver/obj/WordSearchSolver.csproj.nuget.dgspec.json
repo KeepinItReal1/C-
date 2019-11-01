@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukis\\source\\repos\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {}
+    "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukis\\source\\repos\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {
+    "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukis\\source\\repos\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+        "projectUniqueName": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
         "projectName": "WordSearchSolver",
-        "projectPath": "C:\\Users\\lukis\\source\\repos\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+        "projectPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
         "packagesPath": "C:\\Users\\lukis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukis\\source\\repos\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver\\obj\\",
+        "outputPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lukis\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,30 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
