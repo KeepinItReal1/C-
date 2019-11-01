@@ -39,7 +39,7 @@ namespace WordSearchSolver.Pages
             }
             else 
             {
-                ErrorMessage = "Invalid file type.";
+                ErrorMessage = "Invalid file type. Only *." + Puzzle.imageType + " files are allowed";
                 return Page();
             }
         }
