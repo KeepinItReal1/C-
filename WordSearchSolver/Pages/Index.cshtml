@@ -11,7 +11,10 @@
 
 <form method="post" enctype="multipart/form-data">
     <div class="text-left">
-        <input type="file" asp-for="Upload" />
+        <input required type="file" accept=".jpg" asp-for="Upload" />
+        <br />
+        <a style="color:red">@Model.ErrorMessage</a>
+        <br />
         <input type="submit" value="Upload" />
     </div>
 </form>

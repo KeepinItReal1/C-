@@ -24,12 +24,24 @@ namespace WordSearchSolver.Pages
 
         [BindProperty]
         public IFormFile Upload { get; set; }
+        private string Folder { get; } = "Images";
+        public string ErrorMessage { get; set; }
         public IActionResult OnPost()
         {
-            var file = Path.Combine(_environment.ContentRootPath, "Images", Upload.FileName);
-            var fileStream = new FileStream(file, FileMode.Create);
-            Upload.CopyToAsync(fileStream);
-            return RedirectToPage("Solver");
+            var file = Path.Combine(_environment.ContentRootPath, Folder, Upload.FileName);
+            string imageType = Upload.ContentType.Split('/').Last();
+            if (imageType == Puzzle.imageType)
+            {
+                var fileStream = new FileStream(file, FileMode.Create);
+                Upload.CopyToAsync(fileStream);
+                Puzzle.imagePath = Folder + '/' + Upload.FileName;
+                return RedirectToPage("Solver");
+            }
+            else 
+            {
+                ErrorMessage = "Invalid file type.";
+                return Page();
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ namespace WordSearchSolver
 {
     public static class Puzzle
     {
-        public static string Text { get; set; } = "aaa";
+        public static string imagePath { get; set; }
+        public static string imageType { get; } = "jpg";
     }
 }
