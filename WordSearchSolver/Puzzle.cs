@@ -8,6 +8,6 @@ namespace WordSearchSolver
     public static class Puzzle
     {
         public static string imagePath { get; set; }
-        public static string imageType { get; } = "jpg";
+        public static string imageType { get; } = "jpeg";
     }
 }
