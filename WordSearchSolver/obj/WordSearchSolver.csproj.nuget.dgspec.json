@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {}
+    "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {
+    "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+        "projectUniqueName": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
         "projectName": "WordSearchSolver",
-        "projectPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
-        "packagesPath": "C:\\Users\\lukis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\obj\\",
+        "projectPath": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+        "packagesPath": "C:\\Users\\justas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lukis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\justas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,6 +62,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Tesseract.Net.SDK": {
+              "target": "Package",
+              "version": "[1.15.342, )"
             }
           },
           "imports": [
