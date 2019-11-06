@@ -9,5 +9,10 @@ namespace WordSearchSolver
     {
         public static string imagePath { get; set; }
         public static string imageType { get; } = "jpeg";
+        public static string text { get; set; }
+
+        public static void initializePuzzle() {
+            text = Tesseract.ConvertImageToText(imagePath);
+        }
     }
 }
