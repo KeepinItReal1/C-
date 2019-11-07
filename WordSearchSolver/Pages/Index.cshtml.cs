@@ -35,6 +35,7 @@ namespace WordSearchSolver.Pages
             {
                 var fileStream = new FileStream(file, FileMode.Create, FileAccess.ReadWrite);
                 Upload.CopyTo(fileStream);
+                fileStream.Dispose();
                 Puzzle.imagePath = Folder + ImageName;
                 Puzzle.initializePuzzle();
                 return RedirectToPage("Solver");

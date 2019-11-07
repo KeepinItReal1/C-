@@ -16,7 +16,7 @@ namespace WordSearchSolver
             using (var api = OcrApi.Create())
             {
                 api.Init(Languages.Lithuanian,"./");
-                plainText = api.GetTextFromImage("wwwroot\\Images\\65.jpg");
+                plainText = api.GetTextFromImage(filePath);
             }
             return plainText;
         }
