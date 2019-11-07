@@ -24,7 +24,8 @@ namespace WordSearchSolver.Pages
 
         [BindProperty]
         public IFormFile Upload { get; set; }
-        private string Folder { get; } = "Images";
+        private string Folder { get; } = "wwwroot\\Images";
+        private string FolderHTML { get; } = "\"~/Images";
         public string ErrorMessage { get; set; }
         public IActionResult OnPost()
         {
@@ -33,8 +34,9 @@ namespace WordSearchSolver.Pages
             if (imageType == Puzzle.imageType)
             {
                 var fileStream = new FileStream(file, FileMode.Create);
-                Upload.CopyToAsync(fileStream);
-                Puzzle.imagePath =Folder + '\\' + Upload.FileName;
+                Upload.CopyTo(fileStream);
+                Puzzle.imagePath = "" + Folder + '\\' + "65.jpg";
+                Puzzle.imagePathHTML = FolderHTML + "/" + "65.jpg\""; 
                 Puzzle.initializePuzzle();
                 return RedirectToPage("Solver");
             }

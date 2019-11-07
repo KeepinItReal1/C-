@@ -266,3 +266,5 @@ C:\Users\justas\Desktop\Blockchain\WordSearchSolver\WordSearchSolver\obj\Debug\n
 C:\Users\justas\Desktop\Blockchain\WordSearchSolver\WordSearchSolver\bin\Debug\netcoreapp3.0\Patagames.Ocr.dll
 C:\Users\justas\Desktop\Blockchain\WordSearchSolver\WordSearchSolver\obj\Debug\netcoreapp3.0\WordSearchSolver.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\justas\Desktop\Blockchain\WordSearchSolver\WordSearchSolver\bin\Debug\netcoreapp3.0\x64\tesseract.dll
+C:\Users\lukis\source\repos\KeepinItReal1\WordSearchSolver\WordSearchSolver\bin\Debug\netcoreapp3.0\x64\tesseract.dll
+C:\Users\lukis\source\repos\KeepinItReal1\WordSearchSolver\WordSearchSolver\bin\Debug\netcoreapp3.0\Patagames.Ocr.dll
