@@ -24,19 +24,18 @@ namespace WordSearchSolver.Pages
 
         [BindProperty]
         public IFormFile Upload { get; set; }
-        private string Folder { get; } = "wwwroot\\Images";
-        private string FolderHTML { get; } = "\"~/Images";
+        private string Folder { get; } = "wwwroot\\Images\\";
+        private string ImageName { get; set; } = "image.jpg";
         public string ErrorMessage { get; set; }
         public IActionResult OnPost()
         {
-            var file = Path.Combine(_environment.ContentRootPath, Folder, Upload.FileName);
+            var file = Path.Combine(_environment.ContentRootPath, Folder, ImageName);
             string imageType = Upload.ContentType.Split('/').Last();
             if (imageType == Puzzle.imageType)
             {
-                var fileStream = new FileStream(file, FileMode.Create);
+                var fileStream = new FileStream(file, FileMode.Create, FileAccess.ReadWrite);
                 Upload.CopyTo(fileStream);
-                Puzzle.imagePath = "" + Folder + '\\' + "65.jpg";
-                Puzzle.imagePathHTML = FolderHTML + "/" + "65.jpg\""; 
+                Puzzle.imagePath = Folder + ImageName;
                 Puzzle.initializePuzzle();
                 return RedirectToPage("Solver");
             }

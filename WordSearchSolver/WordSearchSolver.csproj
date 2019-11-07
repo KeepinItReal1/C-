@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\Capture1.PNG" />
-    <None Include="wwwroot\Images\65.jpg" />
   </ItemGroup>
 
   <ItemGroup>
