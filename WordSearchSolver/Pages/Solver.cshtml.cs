@@ -9,9 +9,11 @@ namespace WordSearchSolver.Pages
 {
     public class SolverModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnPost()
         {
-
+            var input = Request.Form["word"];
+            Puzzle.findWord(input);
+            return Page();
         }
     }
 }

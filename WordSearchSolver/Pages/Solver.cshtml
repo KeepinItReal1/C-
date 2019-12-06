@@ -6,8 +6,36 @@
 
     <div class="text-left">
         <h1 class="display-4">Word Search Solver</h1>
-        <p>@Puzzle.imagePath</p>
-        <p>@Puzzle.imageType</p>
-        <p>@Puzzle.text</p>
         <img src="~/Images/image.jpg" />
     </div>
+    
+    
+
+    <table class="grid_table">
+    @for (int i = 0; i < Puzzle.y; i++)
+    {
+        <tr class="grid_row">
+        @for (int j = 0; j < Puzzle.x; j++)
+        {
+            if (@Puzzle.textGrid[i, j].IsActive)
+            {
+                <td class="grid_cell_active">
+                    @Puzzle.textGrid[i, j].Value
+                </td>
+            }
+            else { 
+                <td class="grid_cell_inactive">
+                    @Puzzle.textGrid[i, j].Value
+                </td>
+            }
+        }          
+        </tr>
+    }
+    </table>
+
+    <form method="post">
+        <div>
+            <input required type="text" name="word"/>
+            <input type="submit" value="Find"/>
+        </div>
+    </form>

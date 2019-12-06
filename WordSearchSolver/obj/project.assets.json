@@ -8289,19 +8289,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukis\\.nuget\\packages\\": {}
+    "C:\\Users\\L.Kuzma\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+      "projectUniqueName": "C:\\Users\\L.Kuzma\\Source\\Repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
       "projectName": "WordSearchSolver",
-      "projectPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
-      "packagesPath": "C:\\Users\\lukis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\obj\\",
+      "projectPath": "C:\\Users\\L.Kuzma\\Source\\Repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+      "packagesPath": "C:\\Users\\L.Kuzma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\L.Kuzma\\Source\\Repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lukis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\L.Kuzma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
