@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WordSearchSolver"
   ],
-  "SelectedNode": "\\WordSearchSolver.sln",
+  "SelectedNode": "\\WordSearchSolver\\Tesseract.cs",
   "PreviewInSolutionExplorer": false
 }

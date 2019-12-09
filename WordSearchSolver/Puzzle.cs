@@ -10,35 +10,35 @@ namespace WordSearchSolver
         public static string imagePath { get; set; }
         public static string imageType { get; } = "jpeg";
         public static string text { get; set; }
-
         public static Cell[,] textGrid { get; private set; }
+        public static Cell[,] textGrid2 { get; private set;}
         public static int x { get; private set; }
         public static int y { get; private set; }
+
+        public static char lastChar { get; private set; }
         public static void initializePuzzle() {
-            //text = Tesseract.ConvertImageToText(imagePath);
+            text = Tesseract.ConvertImageToText(imagePath);
+            text = text.ToUpper();
             textToGrid();
         }
 
         public static void textToGrid() {
-            x = 4;
-            y = 3;
-            textGrid = new Cell[y, x];
-            textGrid[0, 0] = new Cell('A');
-            textGrid[0, 1] = new Cell('B');
-            textGrid[0, 2] = new Cell('C');
-            textGrid[0, 3] = new Cell('D');
-            textGrid[1, 0] = new Cell('E');
-            textGrid[1, 1] = new Cell('F');
-            textGrid[1, 2] = new Cell('G');
-            textGrid[1, 3] = new Cell('H');
-            textGrid[2, 0] = new Cell('I');
-            textGrid[2, 1] = new Cell('J');
-            textGrid[2, 2] = new Cell('K');
-            textGrid[2, 3] = new Cell('L');
+            List<string> lines = text.Split('\n').ToList();
+            x = lines[0].Length;
+            List<string> validLines = lines.Where(s => s.Length == x).ToList();
+            y = validLines.Count;
 
+            textGrid = new Cell[y, x];
+            for (int i = 0; i < y; i++)
+            {
+                for (int j = 0; j < x; j++)
+                {
+                    textGrid[i, j] = new Cell(validLines[i][j]);
+                }
+            }
         }
 
-        public static bool findWord(string input) {
+        public static void findWord(string input) {
             input = input.ToUpper();
             resetGridActivity();
             var correctCells = new List<Cell>();
@@ -47,7 +47,7 @@ namespace WordSearchSolver
                     for (int j = 0; j < x; j++)
                         if (input[0] == textGrid[i, j].Value)
                             textGrid[i, j].IsActive = true;
-                return true;
+                return;
             }
             for (int i = 0; i < y; i++) {
                 for (int j = 0; j < x; j++) {
@@ -66,13 +66,13 @@ namespace WordSearchSolver
                             {
                                 foreach (Cell cell in correctCells)
                                     cell.IsActive = true;
-                                return true;
+                                return;
                             }
                         }
                     }
                 }
             }
-            return true;
+            return;
         }
         public static void resetGridActivity() {
             for (int i = 0; i < y; i++)

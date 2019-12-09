@@ -15,7 +15,7 @@ namespace WordSearchSolver
             string plainText = "Error 505";
             using (var api = OcrApi.Create())
             {
-                api.Init(Languages.Lithuanian,"./");
+                api.Init(Languages.Lithuanian, "./");
                 plainText = api.GetTextFromImage(filePath);
             }
             return plainText;
