@@ -41,7 +41,6 @@ namespace WordSearchSolver
         public static void findWord(string input) {
             input = input.ToUpper();
             resetGridActivity();
-            var correctCells = new List<Cell>();
             if (input.Length == 1) {
                 for (int i = 0; i < y; i++)
                     for (int j = 0; j < x; j++)
@@ -55,6 +54,7 @@ namespace WordSearchSolver
                     {
                         List<Tuple<int, int>> directions = getDirections(i, j, input[1]);
                         foreach (Tuple<int, int> direction in directions) {
+                            var correctCells = new List<Cell>();
                             int ii = direction.Item1;
                             int jj = direction.Item2;
                             for (int k = 0; k < input.Length; k++) {
