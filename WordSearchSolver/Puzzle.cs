@@ -38,41 +38,53 @@ namespace WordSearchSolver
             }
         }
 
-        public static void findWord(string input) {
+        public static bool findWord(string input) {
             input = input.ToUpper();
             resetGridActivity();
-            if (input.Length == 1) {
+            if (input.Length == 1)
+            {
+                bool wasFound = false;
                 for (int i = 0; i < y; i++)
                     for (int j = 0; j < x; j++)
-                        if (input[0] == textGrid[i, j].Value)
+                        if (input[0] == textGrid[i, j].Value) 
+                        {
                             textGrid[i, j].IsActive = true;
-                return;
+                            wasFound = true;
+                        }
+                return wasFound;
             }
-            for (int i = 0; i < y; i++) {
-                for (int j = 0; j < x; j++) {
-                    if (input[0] == textGrid[i, j].Value)
+            else 
+            {
+                for (int i = 0; i < y; i++)
+                {
+                    for (int j = 0; j < x; j++)
                     {
-                        List<Tuple<int, int>> directions = getDirections(i, j, input[1]);
-                        foreach (Tuple<int, int> direction in directions) {
-                            var correctCells = new List<Cell>();
-                            int ii = direction.Item1;
-                            int jj = direction.Item2;
-                            for (int k = 0; k < input.Length; k++) {
-                                if (i + ii * k >= 0 && i + ii * k < y && j + jj * k >= 0 && j + jj * k < x && input[k] == textGrid[i + ii * k, j + jj * k].Value)
-                                    correctCells.Add(textGrid[i + ii * k, j + jj * k]);
-                                else break;
-                            }
-                            if (correctCells.Count == input.Length)
+                        if (input[0] == textGrid[i, j].Value)
+                        {
+                            List<Tuple<int, int>> directions = getDirections(i, j, input[1]);
+                            foreach (Tuple<int, int> direction in directions)
                             {
-                                foreach (Cell cell in correctCells)
-                                    cell.IsActive = true;
-                                return;
+                                var correctCells = new List<Cell>();
+                                int ii = direction.Item1;
+                                int jj = direction.Item2;
+                                for (int k = 0; k < input.Length; k++)
+                                {
+                                    if (i + ii * k >= 0 && i + ii * k < y && j + jj * k >= 0 && j + jj * k < x && input[k] == textGrid[i + ii * k, j + jj * k].Value)
+                                        correctCells.Add(textGrid[i + ii * k, j + jj * k]);
+                                    else break;
+                                }
+                                if (correctCells.Count == input.Length)
+                                {
+                                    foreach (Cell cell in correctCells)
+                                        cell.IsActive = true;
+                                    return true;
+                                }
                             }
                         }
                     }
                 }
             }
-            return;
+            return false;
         }
         public static void resetGridActivity() {
             for (int i = 0; i < y; i++)
@@ -84,7 +96,7 @@ namespace WordSearchSolver
             var directions = new List<Tuple<int, int>>();
             for (int ii = -1; ii < 2; ii++)
                 for (int jj = -1; jj < 2; jj++)
-                    if (i + ii >= 0 && i + ii < y && j + jj >= 0 && j + jj < x && textGrid[i + ii, j + jj].Value == target)
+                    if (i + ii >= 0 && i + ii < y && j + jj >= 0 && j + jj < x && textGrid[i + ii, j + jj].Value == target && !(jj == 0 && ii == 0))
                         directions.Add(new Tuple<int, int>(ii, jj));
             return directions;
         }
