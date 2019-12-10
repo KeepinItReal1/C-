@@ -4,38 +4,65 @@
     ViewData["Title"] = "Solver";
 }
 
-    <div class="text-left">
-        <h1 class="display-4">Word Search Solver</h1>
-        <img src="~/Images/image.jpg" />
-    </div>
-    
-    
+<div class="text-left">
+    <h1 class="display-4">Word Search Solver</h1>
+</div>
 
-    <table class="grid_table">
-    @for (int i = 0; i < Puzzle.y; i++)
-    {
-        <tr class="grid_row">
-        @for (int j = 0; j < Puzzle.x; j++)
-        {
-            if (@Puzzle.textGrid[i, j].IsActive)
+<table class="board">
+    <tr>
+        <td>
+            Found Words: @Puzzle.wordList.Count
+        </td>
+        <td>
+            <form method="post">
+                <div>
+                    <input required type="text" name="word" />
+                    <input type="submit" value="Find" />
+                </div>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td id="words_list">
+            @for (int i = 0; i < Puzzle.wordList.Count; i++)
             {
-                <td class="grid_cell_active">
-                    @Puzzle.textGrid[i, j].Value
-                </td>
+                <div>
+                    <a asp-page-handler="Test" asp-route-id="@i">
+                        <div>
+                            @Puzzle.wordList.ElementAt(i).word
+                        </div>
+                    </a>
+                </div>
             }
-            else { 
-                <td class="grid_cell_inactive">
-                    @Puzzle.textGrid[i, j].Value
-                </td>
-            }
-        }          
-        </tr>
-    }
-    </table>
-
-    <form method="post">
-        <div>
-            <input required type="text" name="word"/>
-            <input type="submit" value="Find"/>
-        </div>
-    </form>
+        </td>
+        <td>
+            <table class="grid_table">
+                @for (int i = 0; i < Puzzle.y; i++)
+                {
+                    <tr class="grid_row">
+                        @for (int j = 0; j < Puzzle.x; j++)
+                        {
+                            if (@Puzzle.textGrid[i, j].IsActive)
+                            {
+                                <td class="grid_cell_active">
+                                    @Puzzle.textGrid[i, j].Value
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="grid_cell_inactive">
+                                    @Puzzle.textGrid[i, j].Value
+                                </td>
+                            }
+                        }
+                    </tr>
+                }
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img src="~/Images/image.jpg" />
+        </td>
+    </tr>
+</table>

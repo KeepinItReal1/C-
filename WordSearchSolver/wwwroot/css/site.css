@@ -87,3 +87,11 @@ body {
 .grid_cell_active {
     background-color: lightgreen;
 }
+
+.board {
+    border: 1px solid black;
+}
+
+.word_container:hover {
+    background-color: red;
+}

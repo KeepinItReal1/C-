@@ -15,5 +15,11 @@ namespace WordSearchSolver.Pages
             Puzzle.findWord(input);
             return Page();
         }
+
+        public IActionResult OnGetTest(int i) 
+        {
+            Puzzle.ActivateByIndex(i);
+            return Page();
+        }
     }
 }

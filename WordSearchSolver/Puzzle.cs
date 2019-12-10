@@ -11,15 +11,14 @@ namespace WordSearchSolver
         public static string imageType { get; } = "jpeg";
         public static string text { get; set; }
         public static Cell[,] textGrid { get; private set; }
-        public static Cell[,] textGrid2 { get; private set;}
         public static int x { get; private set; }
         public static int y { get; private set; }
-
-        public static char lastChar { get; private set; }
+        public static List<Word> wordList { get; private set; } 
         public static void initializePuzzle() {
             text = Tesseract.ConvertImageToText(imagePath);
             text = text.ToUpper();
             textToGrid();
+            wordList = new List<Word>();
         }
 
         public static void textToGrid() {
@@ -75,8 +74,8 @@ namespace WordSearchSolver
                                 }
                                 if (correctCells.Count == input.Length)
                                 {
-                                    foreach (Cell cell in correctCells)
-                                        cell.IsActive = true;
+                                    wordList.Add(new Word(input, correctCells));
+                                    wordList.Last().Activate();
                                     return true;
                                 }
                             }
@@ -100,14 +99,38 @@ namespace WordSearchSolver
                         directions.Add(new Tuple<int, int>(ii, jj));
             return directions;
         }
+
+        public static void ActivateByIndex(int index) 
+        {
+            resetGridActivity();
+            wordList.ElementAt(index).Activate();
+        }
     }
 
     public class Cell { 
-        public char Value { get; set; }
+        public char Value { get; private set; }
         public bool IsActive { get; set; }
         public Cell(char v) {
             Value = v;
             IsActive = false;
+        }
+    }
+
+    public class Word
+    {
+        public string word { get; private set; }
+        public List<Cell> cellList { get; set;}
+
+        public Word(string w, List<Cell> cl) 
+        {
+            word = w;
+            cellList = cl;
+        }
+
+        public void Activate() 
+        {
+            foreach (Cell cell in cellList)
+                cell.IsActive = true;
         }
     }
 }
