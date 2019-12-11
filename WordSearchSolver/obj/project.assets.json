@@ -8442,23 +8442,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\justas\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\lukis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+      "projectUniqueName": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
       "projectName": "WordSearchSolver",
-      "projectPath": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
-      "packagesPath": "C:\\Users\\justas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\justas\\Desktop\\Blockchain\\WordSearchSolver\\WordSearchSolver\\obj\\",
+      "projectPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\WordSearchSolver.csproj",
+      "packagesPath": "C:\\Users\\lukis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukis\\source\\repos\\KeepinItReal1\\WordSearchSolver\\WordSearchSolver\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\justas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lukis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
