@@ -7,6 +7,7 @@ namespace WordSearchSolver
 {
     public static class Puzzle
     {
+        public static Boolean UploadAnsFlag { get; set; }
         public static string imagePath { get; set; }
         public static string AnsImagePath { get; set; }
         public static string imageType { get; } = "jpeg";
@@ -27,8 +28,11 @@ namespace WordSearchSolver
         {
             AnsText = Tesseract.ConvertImageToText(AnsImagePath);
             AnsText = AnsText.ToUpper();
-            AnsList = AnsText.Split(" ").ToList();
-            
+            AnsList = AnsText.Split(new char[0]).ToList();
+            foreach(var i in AnsList)
+            {
+                //findWord(i);
+            }
         }
 
         public static void textToGrid() {

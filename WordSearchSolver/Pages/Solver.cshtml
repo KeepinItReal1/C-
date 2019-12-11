@@ -67,6 +67,8 @@
     </tr>
 </table>
 
+@if (Puzzle.UploadAnsFlag == true)
+{
     <table class="AnsBoard">
         <tr>
             <th>Number</th>
@@ -79,7 +81,8 @@
                 <td>@i</td>
                 <td>@Puzzle.AnsList[i]</td>
             </tr>
-        }   
+        }
     </table>
+}
 
 

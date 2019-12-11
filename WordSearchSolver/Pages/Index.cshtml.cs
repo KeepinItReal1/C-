@@ -44,6 +44,7 @@ namespace WordSearchSolver.Pages
                 Puzzle.initializePuzzle();
                 if (UploadAns != null)
                 {
+                    Puzzle.UploadAnsFlag = true;
                     string AnsImageType = UploadAns.ContentType.Split('/').Last();
                     if (AnsImageType == Puzzle.imageType)
                     {
@@ -58,6 +59,10 @@ namespace WordSearchSolver.Pages
                         ErrorMessage = "Invalid file type. Only *." + Puzzle.imageType + " files are allowed" + AnsImageType;
                         return Page();
                     }
+                }
+                else
+                {
+                    Puzzle.UploadAnsFlag = false;
                 }
                 return RedirectToPage("Solver");
             }
