@@ -7,6 +7,7 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -59,8 +60,10 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-image: url("../Images/background.jpg");
+    /*background:linear-gradient(white,black);*/
 }
 .footer {
   position: absolute;
@@ -107,6 +110,10 @@ body {
 
 .AnsBoard tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+.AnsBoard tr:nth-child(odd) {
+    background-color: #FFF;
 }
 
 .AnsBoard tr:hover {
