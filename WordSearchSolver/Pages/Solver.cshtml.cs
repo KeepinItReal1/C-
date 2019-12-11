@@ -16,9 +16,9 @@ namespace WordSearchSolver.Pages
             return Page();
         }
 
-        public IActionResult OnGetTest(int i) 
+        public IActionResult OnGetButtonActivate(int index) 
         {
-            Puzzle.ActivateByIndex(i);
+            Puzzle.ActivateByIndex(index);
             return Page();
         }
     }

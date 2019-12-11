@@ -27,7 +27,7 @@
             @for (int i = 0; i < Puzzle.wordList.Count; i++)
             {
                 <div>
-                    <a asp-page-handler="Test" asp-route-id="@i">
+                    <a asp-page-handler="ButtonActivate" asp-route-index="@i">
                         <div>
                             @Puzzle.wordList.ElementAt(i).word
                         </div>

@@ -31,7 +31,7 @@ namespace WordSearchSolver
             AnsList = AnsText.Split(new char[0]).ToList();
             foreach(var i in AnsList)
             {
-                //findWord(i);
+                findWord(i);
             }
         }
 
@@ -52,6 +52,8 @@ namespace WordSearchSolver
         }
 
         public static bool findWord(string input) {
+            if (input.Length == 0)
+                return false;
             input = input.ToUpper();
             resetGridActivity();
             if (input.Length == 1)
