@@ -8,8 +8,11 @@ namespace WordSearchSolver
     public static class Puzzle
     {
         public static string imagePath { get; set; }
+        public static string AnsImagePath { get; set; }
         public static string imageType { get; } = "jpeg";
         public static string text { get; set; }
+        public static string AnsText { get; set; }
+        public static List<string> AnsList { get; private set; }
         public static Cell[,] textGrid { get; private set; }
         public static int x { get; private set; }
         public static int y { get; private set; }
@@ -19,6 +22,13 @@ namespace WordSearchSolver
             text = text.ToUpper();
             textToGrid();
             wordList = new List<Word>();
+        }
+        public static void InitializeAns()
+        {
+            AnsText = Tesseract.ConvertImageToText(AnsImagePath);
+            AnsText = AnsText.ToUpper();
+            AnsList = AnsText.Split(" ").ToList();
+            
         }
 
         public static void textToGrid() {

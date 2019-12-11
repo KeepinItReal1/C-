@@ -66,3 +66,20 @@
         </td>
     </tr>
 </table>
+
+    <table class="AnsBoard">
+        <tr>
+            <th>Number</th>
+            <th>Word</th>
+        </tr>
+
+        @for (var i = 0; i < Puzzle.AnsList.Count; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@Puzzle.AnsList[i]</td>
+            </tr>
+        }   
+    </table>
+
+

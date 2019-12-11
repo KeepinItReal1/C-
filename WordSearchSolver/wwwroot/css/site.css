@@ -95,3 +95,28 @@ body {
 .word_container:hover {
     background-color: red;
 }
+
+.AnsBoard {
+    border: 1px solid black;
+}
+
+.AnsBoard td, .AnsBoard th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.AnsBoard tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.AnsBoard tr:hover {
+        background-color: #ddd;
+    }
+
+.AnsBoard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;/*green*/
+    color: white;
+}

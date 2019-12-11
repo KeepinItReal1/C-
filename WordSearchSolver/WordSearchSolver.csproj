@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Capture1.PNG" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="x64\tesseract.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -15,9 +15,17 @@
         <br />
         <a style="color:red">@Model.ErrorMessage</a>
         <br />
+        <p>(OPTIONAL)</p>
+        <p>Upload an answer image.</p>
+        <input type="file" accept=".jpg" asp-for="UploadAns" />
+        <br />
+        <a style="color:red">@Model.ErrorMessage</a>
+        <br />
         <input type="submit" value="Upload" />
     </div>
 </form>
+
+
 
 <script>
 
