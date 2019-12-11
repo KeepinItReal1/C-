@@ -24,16 +24,23 @@
     </tr>
     <tr>
         <td id="words_list">
-            @for (int i = 0; i < Puzzle.wordList.Count; i++)
-            {
-                <div>
-                    <a asp-page-handler="ButtonActivate" asp-route-index="@i">
-                        <div>
+            <table>
+                @for (int i = 0; i < Puzzle.wordList.Count; i++)
+                {
+                <tr>
+                    <td>
+                        <a asp-page-handler="ButtonActivate" asp-route-index="@i">
                             @Puzzle.wordList.ElementAt(i).word
-                        </div>
-                    </a>
-                </div>
-            }
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-page-handler="ButtonRemove" asp-route-index="@i">
+                            x
+                        </a>
+                    </td>
+                </tr>
+                }
+            </table>
         </td>
         <td>
             <table class="grid_table">

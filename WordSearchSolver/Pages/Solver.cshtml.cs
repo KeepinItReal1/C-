@@ -21,5 +21,11 @@ namespace WordSearchSolver.Pages
             Puzzle.ActivateByIndex(index);
             return Page();
         }
+
+        public IActionResult OnGetButtonRemove(int index)
+        {
+            Puzzle.RemoveByIndex(index);
+            return Page();
+        }
     }
 }

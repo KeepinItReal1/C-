@@ -90,8 +90,10 @@ namespace WordSearchSolver
                                 }
                                 if (correctCells.Count == input.Length)
                                 {
-                                    wordList.Add(new Word(input, correctCells));
-                                    wordList.Last().Activate();
+                                    Word word = new Word(input, correctCells);
+                                    if (!wordList.Contains(word))
+                                        wordList.Add(word);
+                                    word.Activate();
                                     return true;
                                 }
                             }
@@ -120,6 +122,11 @@ namespace WordSearchSolver
         {
             resetGridActivity();
             wordList.ElementAt(index).Activate();
+        }
+
+        public static void RemoveByIndex(int index)
+        {
+            wordList.RemoveAt(index);
         }
     }
 
